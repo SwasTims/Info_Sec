@@ -8,8 +8,8 @@ def vigenere_cipher(text, key):
             result += chr((ord(char.lower()) - shift_base + shift) % 26 + shift_base)
         else:
             result += char
-    return result
+    return result    
 plaintext = input("Enter your message: ")
-key = input("Enter the no. of keys: ")
+key = input("Enter the key: ")
 ciphertext = vigenere_cipher(plaintext, key)
 print(f"Ciphertext: {ciphertext}")
