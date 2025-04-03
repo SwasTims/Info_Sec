@@ -15,10 +15,10 @@ class RoleBasedAccessControl:
 
         if role in self.roles:
             self.users[username] = role
-            print(f"✅ User '{username}' added as '{role}'.")
-            print(f"🔹 Permissions: {', '.join(self.roles[role])}")
+            print(f" User '{username}' added as '{role}'.")
+            print(f" Permissions: {', '.join(self.roles[role])}")
         else:
-            print("❌ Invalid role! Please choose from admin, editor, or viewer.")
+            print(" Invalid role! Please choose from admin, editor, or viewer.")
 
     def check_access(self):
         """Check if a user has permission for an action."""
@@ -27,9 +27,9 @@ class RoleBasedAccessControl:
 
         role = self.users.get(username)
         if role and permission in self.roles[role]:
-            print(f"✅ Access granted for {username} to {permission}.")
+            print(f" Access granted for {username} to {permission}.")
         else:
-            print(f"❌ Access denied for {username} to {permission}.")
+            print(f" Access denied for {username} to {permission}.")
 
 # Menu-based system
 rbac = RoleBasedAccessControl()
